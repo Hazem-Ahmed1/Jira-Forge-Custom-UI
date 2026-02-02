@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+  .radio-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Accordion styles */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+  opacity: 0;
+  padding-bottom: 0;
+}
+.accordion-content.expanded {
+  max-height: 2000px;
+  opacity: 1;
+  padding-bottom: 1rem;
+}
+
+/* Sub-accordion styles for nested sections (GitLab, Sysdig) */
+.sub-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+.sub-accordion-content.expanded {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .accordion-content.expanded {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.accordion-toggle {
+  transition: transform 0.3s ease;
+}
+.accordion-toggle.rotated {
+  transform: rotate(180deg);
+}
+
+/* Tag (link) styles */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  animation: fadeIn 0.2s ease-out;
+}
+.tag button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+.tag button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid rgba(19, 127, 236, 0.2);
+  border-radius: 50%;
+  border-top-color: #137fec;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s ease-in-out infinite;
+}
+.spinner.small {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 600;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+.toast.success { background-color: #10b981; }
+.toast.error { background-color: #ef4444; }
+.toast.info { background-color: #3b82f6; }
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+#root {
+  min-height: 100vh;
+}
