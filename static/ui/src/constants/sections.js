@@ -1,0 +1,83 @@
+export const MAX_LINKS = 15;
+export const MAX_FILES = 5;
+export const MAX_FILE_SIZE = 5 * 1024 * 1024;
+
+export const SECTIONS = ['sast', 'sca', 'iac', 'secret', 'container'];
+
+export const SEVERITIES = ['information', 'low', 'medium', 'high', 'critical'];
+
+export const SECTION_CONFIG = {
+  sast: {
+    name: 'SAST',
+    fullName: 'SAST (Static Application Security Testing)',
+    subtitle: 'Static Application Security Testing',
+    icon: 'code',
+    sectionCard: 'bg-pastel-blue dark:bg-sky-950/30 rounded-xl sm:rounded-2xl border border-sky-100 dark:border-sky-900 transition-all shadow-sm overflow-hidden',
+    iconBox: 'bg-white dark:bg-sky-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-sm',
+    iconColor: 'text-sky-600 dark:text-sky-300',
+    radioAccent: 'text-sky-600 focus:ring-sky-500',
+    addBtn: 'bg-sky-500 hover:bg-sky-600',
+    focusRing: 'focus:ring-2 focus:ring-sky-500 focus:border-transparent',
+    innerBorder: 'border-sky-100 dark:border-sky-800',
+    accordionHover: 'hover:bg-sky-200 dark:hover:bg-sky-800',
+  },
+  sca: {
+    name: 'Vulnerable Dependencies - Software Composition Analysis',
+    fullName: 'Vulnerable Dependencies - SCA (Software Composition Analysis)',
+    subtitle: 'SCA',
+    icon: null,
+    iconImg: 'https://res.cloudinary.com/db8xljlgy/image/upload/v1768903645/dependencies_zn1pt1.png',
+    sectionCard: 'bg-pastel-green dark:bg-emerald-950/30 rounded-xl sm:rounded-2xl border border-emerald-100 dark:border-emerald-900 transition-all shadow-sm overflow-hidden',
+    iconBox: 'bg-white dark:bg-emerald-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-sm flex items-center justify-center',
+    iconColor: 'text-emerald-600 dark:text-emerald-300',
+    radioAccent: 'text-emerald-600 focus:ring-emerald-500',
+    addBtn: 'bg-emerald-500 hover:bg-emerald-600',
+    focusRing: 'focus:ring-2 focus:ring-emerald-500 focus:border-transparent',
+    innerBorder: 'border-emerald-100 dark:border-emerald-800',
+    accordionHover: 'hover:bg-emerald-200 dark:hover:bg-emerald-800',
+  },
+  iac: {
+    name: 'Infrastructure as Code - Infrastructure Configuration',
+    fullName: 'Infrastructure as Code (IaC Configuration)',
+    subtitle: 'IaC',
+    icon: 'cube',
+    iconImg: null,
+    sectionCard: 'bg-pastel-yellow dark:bg-amber-950/30 rounded-xl sm:rounded-2xl border border-amber-100 dark:border-amber-900 transition-all shadow-sm overflow-hidden',
+    iconBox: 'bg-white dark:bg-amber-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-sm',
+    iconColor: 'text-amber-600 dark:text-amber-300',
+    radioAccent: 'text-amber-600 focus:ring-amber-500',
+    addBtn: 'bg-amber-500 hover:bg-amber-600',
+    focusRing: 'focus:ring-2 focus:ring-amber-500 focus:border-transparent',
+    innerBorder: 'border-amber-100 dark:border-amber-800',
+    accordionHover: 'hover:bg-amber-200 dark:hover:bg-amber-800',
+  },
+  secret: {
+    name: 'Secret Detection',
+    fullName: 'Secret Detection (Sensitive Info/Data Exposure)',
+    subtitle: 'Sensitive Info/Data Exposure',
+    icon: 'key',
+    sectionCard: 'bg-pastel-purple dark:bg-violet-950/30 rounded-xl sm:rounded-2xl border border-violet-100 dark:border-violet-900 transition-all shadow-sm overflow-hidden',
+    iconBox: 'bg-white dark:bg-violet-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-sm',
+    iconColor: 'text-violet-600 dark:text-violet-300',
+    radioAccent: 'text-violet-600 focus:ring-violet-500',
+    addBtn: 'bg-violet-500 hover:bg-violet-600',
+    focusRing: 'focus:ring-2 focus:ring-violet-500 focus:border-transparent',
+    innerBorder: 'border-violet-100 dark:border-violet-800',
+    accordionHover: 'hover:bg-violet-200 dark:hover:bg-violet-800',
+  },
+  container: {
+    name: 'Container Images Scanning',
+    fullName: 'Container Images Scanning (Image & Runtime Security)',
+    subtitle: 'Image & Runtime Security',
+    icon: null,
+    iconImg: 'https://res.cloudinary.com/db8xljlgy/image/upload/v1768903705/Container_Icon_ybjfyo.png',
+    sectionCard: 'bg-pastel-red dark:bg-rose-950/30 rounded-xl sm:rounded-2xl border border-rose-100 dark:border-rose-900 transition-all shadow-sm overflow-hidden',
+    iconBox: 'bg-white dark:bg-rose-900 p-2 sm:p-3 rounded-lg sm:rounded-xl shadow-sm',
+    iconColor: 'text-rose-600 dark:text-rose-300',
+    radioAccent: 'text-rose-600 focus:ring-rose-500',
+    addBtn: 'bg-rose-500 hover:bg-rose-600',
+    focusRing: 'focus:ring-2 focus:ring-rose-500 focus:border-transparent',
+    innerBorder: 'border-rose-100 dark:border-rose-800',
+    accordionHover: 'hover:bg-rose-200 dark:hover:bg-rose-800',
+  },
+};
