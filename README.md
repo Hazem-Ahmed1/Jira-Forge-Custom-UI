@@ -2,6 +2,19 @@
 
 A Jira project page built with Atlassian Forge and React that lets developers submit structured security assessments directly inside their Jira project.
 
+## Demo
+
+### Assessment Form
+<img src="docs/01-assessment-form.png" alt="Assessment Form" width="100%" />
+
+### Security Sections — Expanded
+<img src="docs/02-sections-expanded.png" alt="Security Sections Expanded" width="100%" />
+
+### Dark Mode
+<img src="docs/03-dark-mode.png" alt="Dark Mode" width="100%" />
+
+---
+
 ## Overview
 
 This app adds a **Project Page** to any Jira project. Team members use it to report findings across five security scanning categories:
